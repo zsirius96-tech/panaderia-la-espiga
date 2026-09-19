@@ -193,3 +193,16 @@ address { font-style: normal; font-size: 1.2rem; font-weight: 700; }
   }
   .main-nav ul.is-open { display: flex; }
 }
+
+/* Tarjetas desplegables */
+.card-expand { cursor: pointer; }
+.card-expand .chev { display: inline-block; transition: transform 0.25s; color: var(--gold-dark); }
+.card-expand[aria-expanded="true"] .chev { transform: rotate(180deg); }
+.card-panel { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.3s ease; }
+.card-expand[aria-expanded="true"] .card-panel { grid-template-rows: 1fr; }
+.card-panel > div { overflow: hidden; }
+.card-panel ul { list-style: none; margin: 14px 0 0; padding: 12px 0 0; border-top: 2px dashed var(--cream-dark); display: grid; gap: 2px; }
+.card-panel li a { display: flex; justify-content: space-between; gap: 10px; padding: 7px 4px; border-radius: 8px; text-decoration: none; color: var(--espresso); font-size: 0.93rem; }
+.card-panel li a:hover { background: var(--cream); }
+.card-panel li strong { color: var(--gold-dark); white-space: nowrap; }
+.card-link { display: inline-block; margin-top: 10px; font-weight: 700; color: var(--gold-dark); }

@@ -31,15 +31,50 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Filtro de la carta
+  // Filtro de la carta (reutilizable desde las tarjetas)
+  const applyFilter = (f) => {
+    document.querySelectorAll(".chip").forEach((c) => c.classList.toggle("is-active", c.dataset.filter === f));
+    document.querySelectorAll(".product").forEach((p) => {
+      p.classList.toggle("is-hidden", f !== "all" && p.dataset.cat !== f);
+    });
+  };
   document.querySelectorAll(".chip").forEach((chip) => {
-    chip.addEventListener("click", () => {
-      document.querySelectorAll(".chip").forEach((c) => c.classList.remove("is-active"));
-      chip.classList.add("is-active");
-      const f = chip.dataset.filter;
-      document.querySelectorAll(".product").forEach((p) => {
-        p.classList.toggle("is-hidden", f !== "all" && p.dataset.cat !== f);
+    chip.addEventListener("click", () => applyFilter(chip.dataset.filter));
+  });
+
+  // Tarjetas desplegables: listan los productos de su categoría
+  document.querySelectorAll(".card-expand").forEach((card) => {
+    const cat = card.dataset.target;
+    const list = card.querySelector(".card-panel ul");
+    if (list) {
+      document.querySelectorAll(`.product[data-cat="${cat}"]`).forEach((p) => {
+        const h3 = p.querySelector("h3");
+        const name = (h3.childNodes[0] ? h3.childNodes[0].textContent : h3.textContent).trim();
+        const price = p.querySelector(".price").textContent;
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+        a.href = "#carta";
+        const label = document.createElement("span");
+        label.textContent = name;
+        const cost = document.createElement("strong");
+        cost.textContent = price;
+        a.appendChild(label);
+        a.appendChild(cost);
+        a.addEventListener("click", (e) => { e.stopPropagation(); applyFilter(cat); });
+        li.appendChild(a);
+        list.appendChild(li);
       });
+      const link = card.querySelector(".card-link");
+      if (link) link.addEventListener("click", (e) => { e.stopPropagation(); applyFilter(cat); });
+    }
+    const toggle = () => {
+      const open = card.getAttribute("aria-expanded") === "true";
+      document.querySelectorAll(".card-expand").forEach((c) => c.setAttribute("aria-expanded", "false"));
+      card.setAttribute("aria-expanded", String(!open));
+    };
+    card.addEventListener("click", toggle);
+    card.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggle(); }
     });
   });
 
