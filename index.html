@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panadería La Espiga — Pan artesano cada mañana</title>
+  <meta name="description" content="Panadería artesana La Espiga: pan de masa madre, bollería y tartas por encargo. Horneado cada mañana. Calle del Horno 12, Madrid." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#carta">Saltar a la carta</a>
+
+  <header class="site-header" id="top">
+    <div class="wrap header-inner">
+      <a class="brand" href="#inicio" aria-label="Panadería La Espiga, inicio">
+        <svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8 6 6 10 6 14a6 6 0 0 0 12 0c0-4-2-8-6-12zm0 18a1.5 1.5 0 0 1-1.5-1.5c0-2 1-4 1.5-5 .5 1 1.5 3 1.5 5A1.5 1.5 0 0 1 12 20z" fill="currentColor"/></svg>
+        <span>La Espiga <small>panadería artesana</small></span>
+      </a>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list" aria-label="Abrir menú">☰</button>
+        <ul id="nav-list">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#carta">Carta</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#encargos">Encargos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn-primary header-cta" href="#encargos">Hacer pedido</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="wrap hero-inner">
+        <p class="kicker">Horno de leña · Desde 1987</p>
+        <h1>Pan de verdad,<br />horneado cada mañana.</h1>
+        <p class="lede">Masa madre, fermentación lenta e ingredientes de cercanía. Sin prisas y sin atajos.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#encargos">Encargar para mañana</a>
+          <a class="btn btn-ghost" href="#carta">Ver la carta</a>
+        </div>
+        <dl class="hero-meta">
+          <div><dt>Lun–Vie</dt><dd>7:30 – 20:00</dd></div>
+          <div><dt>Sábados</dt><dd>8:00 – 14:30</dd></div>
+          <div><dt>Domingos</dt><dd>8:30 – 13:30</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="highlights" aria-label="Destacados">
+      <div class="wrap cards-3">
+        <article class="card">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10h16a1 1 0 0 1 1 1v3a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5v-3a1 1 0 0 1 1-1z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M9 10V7a3 3 0 0 1 6 0v3" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+          <h2>Masa madre</h2>
+          <p>Fermentaciones de 24 horas para un pan que aguanta tierno días, no horas.</p>
+        </article>
+        <article class="card">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3 3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <h2>Del horno a tu mesa</h2>
+          <p>Tres hornadas al día: primera a las 7:30, última a las 17:00.</p>
+        </article>
+        <article class="card">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.5 5.5L20 9.5l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-1z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          <h2>Tartas por encargo</h2>
+          <p>Cumpleaños, bodas y celebraciones con 48 h de antelación.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="menu-section" id="carta">
+      <div class="wrap">
+        <p class="kicker">Nuestra carta</p>
+        <h2>Lo que sale del horno</h2>
+        <p class="section-lede">Precios con IVA. Todo se hornea aquí; cuando se agota, se agota.</p>
+        <div class="filters" role="group" aria-label="Filtrar por categoría">
+          <button class="chip is-active" data-filter="all">Todo</button>
+          <button class="chip" data-filter="pan">Pan</button>
+          <button class="chip" data-filter="bolleria">Bollería</button>
+          <button class="chip" data-filter="pasteleria">Pastelería</button>
+        </div>
+        <ul class="product-grid" id="product-grid">
+          <li class="product" data-cat="pan"><h3>Barra rústica</h3><p>Corteza crujiente, miga abierta.</p><span class="price">1,40&nbsp;€</span></li>
+          <li class="product" data-cat="pan"><h3>Hogaza de masa madre <em>la favorita</em></h3><p>800 g, fermentación de 24 h.</p><span class="price">4,50&nbsp;€</span></li>
+          <li class="product" data-cat="pan"><h3>Pan integral de centeno</h3><p>Con semillas de lino y girasol.</p><span class="price">3,20&nbsp;€</span></li>
+          <li class="product" data-cat="pan"><h3>Chapata de aceite</h3><p>Ideal para bocadillos.</p><span class="price">1,20&nbsp;€</span></li>
+          <li class="product" data-cat="bolleria"><h3>Cruasán de mantequilla</h3><p>Hojaldre de tres días.</p><span class="price">1,60&nbsp;€</span></li>
+          <li class="product" data-cat="bolleria"><h3>Napolitana de chocolate</h3><p>Rellena de crema de cacao.</p><span class="price">1,80&nbsp;€</span></li>
+          <li class="product" data-cat="bolleria"><h3>Ensaimada mallorquina</h3><p>Receta de la abuela Catalina.</p><span class="price">2,20&nbsp;€</span></li>
+          <li class="product" data-cat="bolleria"><h3>Magdalenas <em>bolsa de 4</em></h3><p>Con ralladura de limón.</p><span class="price">3,00&nbsp;€</span></li>
+          <li class="product" data-cat="pasteleria"><h3>Tarta de queso</h3><p>Estilo vasco, corazón cremoso.</p><span class="price">16,00&nbsp;€</span></li>
+          <li class="product" data-cat="pasteleria"><h3>Tarta de Santiago</h3><p>Almendra marcona, sin gluten.</p><span class="price">14,00&nbsp;€</span></li>
+          <li class="product" data-cat="pasteleria"><h3>Brazo de gitano</h3><p>Relleno de trufa o yema.</p><span class="price">12,00&nbsp;€</span></li>
+          <li class="product" data-cat="pasteleria"><h3>Tarta de celebración <em>por encargo</em></h3><p>Diseño a medida desde 48 h antes.</p><span class="price">desde 20,00&nbsp;€</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="story" id="nosotros">
+      <div class="wrap story-inner">
+        <div>
+          <p class="kicker">Nuestra historia</p>
+          <h2>Tres generaciones detrás del mostrador</h2>
+          <p>Empezamos en 1987 con un horno de leña y la masa madre del abuelo Tomás, que aún cuidamos cada día con su mismo nombre: <strong>Manuela</strong>. Hoy seguimos haciendo el pan igual de despacio, aunque la cola de la mañana sea más larga.</p>
+          <p>Molinos de cercanía, huevos camperos y mantequilla de verdad. Nada de mezclas preparadas: aquí se amasa, se espera y se hornea.</p>
+        </div>
+        <ul class="values">
+          <li><strong>24 h</strong><span>fermentación mínima de la hogaza</span></li>
+          <li><strong>3</strong><span>hornadas frescas al día</span></li>
+          <li><strong>0</strong><span>conservantes ni premezclas</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="order" id="encargos">
+      <div class="wrap">
+        <p class="kicker">Encargos</p>
+        <h2>Pide hoy, recoge mañana</h2>
+        <ol class="steps">
+          <li><strong>1. Elige</strong><span>Escribe qué quieres y para cuándo en el formulario.</span></li>
+          <li><strong>2. Te confirmamos</strong><span>Te respondemos por WhatsApp en horario de tienda.</span></li>
+          <li><strong>3. Recoge</strong><span>En Calle del Horno 12. Tartas: 48 h de antelación.</span></li>
+        </ol>
+        <form id="order-form" class="order-form" novalidate>
+          <div class="field">
+            <label for="f-name">Nombre</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required placeholder="Tu nombre" />
+          </div>
+          <div class="field">
+            <label for="f-day">Día de recogida</label>
+            <input id="f-day" name="day" type="date" required />
+          </div>
+          <div class="field field-wide">
+            <label for="f-items">Tu pedido</label>
+            <textarea id="f-items" name="items" rows="4" required placeholder="Ej.: 2 hogazas de masa madre y una tarta de queso"></textarea>
+          </div>
+          <p class="form-error" id="form-error" role="alert" hidden></p>
+          <button class="btn btn-primary" type="submit">Enviar pedido por WhatsApp</button>
+          <p class="form-note">Se abrirá WhatsApp con tu pedido ya escrito. Sin pagos online: pagas al recoger.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="visit" id="contacto">
+      <div class="wrap visit-inner">
+        <div>
+          <p class="kicker">Ven a vernos</p>
+          <h2>Estamos en el barrio</h2>
+          <address>
+            Calle del Horno 12, bajo<br />
+            28004 Madrid
+          </address>
+          <p><a href="tel:+34600123456">600 123 456</a> · <a href="mailto:hola@laespiga.example">hola@laespiga.example</a></p>
+          <dl class="hours">
+            <div><dt>Lunes – Viernes</dt><dd>7:30 – 20:00</dd></div>
+            <div><dt>Sábado</dt><dd>8:00 – 14:30</dd></div>
+            <div><dt>Domingo</dt><dd>8:30 – 13:30</dd></div>
+          </dl>
+        </div>
+        <div class="map-wrap">
+          <iframe title="Mapa: Calle del Horno 12, Madrid" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=-3.7000%2C40.4250%2C-3.6850%2C40.4350&amp;layer=mapnik&amp;marker=40.4300%2C-3.6925"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p><strong>Panadería La Espiga</strong> · Pan artesano desde 1987</p>
+      <p class="legal">© <span id="year">2026</span> La Espiga · <a href="#top">Volver arriba</a></p>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
