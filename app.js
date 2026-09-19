@@ -47,7 +47,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const cat = card.dataset.target;
     const list = card.querySelector(".card-panel ul");
     if (list) {
-      document.querySelectorAll(`.product[data-cat="${cat}"]`).forEach((p) => {
+      const title = document.createElement("p");
+      title.className = "panel-title";
+      title.textContent = "⭐ Mejores valorados";
+      list.before(title);
+      Array.from(document.querySelectorAll(`.product[data-cat="${cat}"]`)).slice(0, 3).forEach((p) => {
         const h3 = p.querySelector("h3");
         const name = (h3.childNodes[0] ? h3.childNodes[0].textContent : h3.textContent).trim();
         const price = p.querySelector(".price").textContent;

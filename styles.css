@@ -206,3 +206,5 @@ address { font-style: normal; font-size: 1.2rem; font-weight: 700; }
 .card-panel li a:hover { background: var(--cream); }
 .card-panel li strong { color: var(--gold-dark); white-space: nowrap; }
 .card-link { display: inline-block; margin-top: 10px; font-weight: 700; color: var(--gold-dark); }
+.panel-title { margin: 14px 0 0; padding-top: 12px; border-top: 2px dashed var(--cream-dark); font-weight: 800; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; color: var(--gold-dark); }
+.card-panel ul { list-style: none; margin: 8px 0 0; padding: 0; border-top: 0; display: grid; gap: 2px; }
