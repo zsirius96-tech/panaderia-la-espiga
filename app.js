@@ -42,8 +42,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Fecha mínima del pedido (mañana por defecto)
+  // Fecha mínima del pedido (mañana por defecto) — solo en encargos.html
   const dayInput = document.getElementById("f-day");
+  const form = document.getElementById("order-form");
+  const errorBox = document.getElementById("form-error");
+  if (dayInput && form) {
   const min = new Date();
   min.setDate(min.getDate() + CONFIG.minDaysAhead);
   const iso = min.toISOString().slice(0, 10);
@@ -51,8 +54,6 @@ document.addEventListener("DOMContentLoaded", () => {
   dayInput.value = iso;
 
   // Pedido → WhatsApp
-  const form = document.getElementById("order-form");
-  const errorBox = document.getElementById("form-error");
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     const name = document.getElementById("f-name").value.trim();
@@ -79,6 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
       `Quiero encargar para el ${prettyDay}:\n${items}`;
     window.open(`https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(msg)}`, "_blank");
   });
+  } // fin solo-encargos
 
   // Aparición suave al hacer scroll
   const io = new IntersectionObserver(

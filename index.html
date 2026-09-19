@@ -12,22 +12,22 @@
 
   <header class="site-header" id="top">
     <div class="wrap header-inner">
-      <a class="brand" href="#inicio" aria-label="Panadería La Espiga, inicio">
+      <a class="brand" href="index.html" aria-label="Panadería La Espiga, inicio">
         <svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8 6 6 10 6 14a6 6 0 0 0 12 0c0-4-2-8-6-12zm0 18a1.5 1.5 0 0 1-1.5-1.5c0-2 1-4 1.5-5 .5 1 1.5 3 1.5 5A1.5 1.5 0 0 1 12 20z" fill="currentColor"/></svg>
         <span>La Espiga <small>panadería artesana</small></span>
       </a>
       <nav class="main-nav" aria-label="Navegación principal">
         <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list" aria-label="Abrir menú">☰</button>
         <ul id="nav-list">
-          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="index.html" aria-current="page">Inicio</a></li>
           <li><a href="#carta">Carta</a></li>
-          <li><a href="#nosotros">Nosotros</a></li>
-          <li><a href="#encargos">Encargos</a></li>
-          <li><a href="#contacto">Contacto</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="encargos.html">Encargos</a></li>
           <li><a href="mapa.html">Tiendas</a></li>
+          <li><a href="#contacto">Contacto</a></li>
         </ul>
       </nav>
-      <a class="btn btn-primary header-cta" href="#encargos">Hacer pedido</a>
+      <a class="btn btn-primary header-cta" href="encargos.html">Hacer pedido</a>
     </div>
   </header>
 
@@ -38,7 +38,7 @@
         <h1>Pan de verdad,<br />horneado cada mañana.</h1>
         <p class="lede">Masa madre, fermentación lenta e ingredientes de cercanía. Sin prisas y sin atajos.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#encargos">Encargar para mañana</a>
+          <a class="btn btn-primary" href="encargos.html">Encargar para mañana</a>
           <a class="btn btn-ghost" href="#carta">Ver la carta</a>
         </div>
         <dl class="hero-meta">
@@ -97,48 +97,30 @@
       </div>
     </section>
 
-    <section class="story" id="nosotros">
-      <div class="wrap story-inner">
-        <div>
-          <p class="kicker">Nuestra historia</p>
-          <h2>Tres generaciones detrás del mostrador</h2>
-          <p>Empezamos en 1987 con un horno de leña y la masa madre del abuelo Tomás, que aún cuidamos cada día con su mismo nombre: <strong>Manuela</strong>. Hoy seguimos haciendo el pan igual de despacio, aunque la cola de la mañana sea más larga.</p>
-          <p>Molinos de cercanía, huevos camperos y mantequilla de verdad. Nada de mezclas preparadas: aquí se amasa, se espera y se hornea.</p>
-        </div>
-        <ul class="values">
-          <li><strong>24 h</strong><span>fermentación mínima de la hogaza</span></li>
-          <li><strong>3</strong><span>hornadas frescas al día</span></li>
-          <li><strong>0</strong><span>conservantes ni premezclas</span></li>
-        </ul>
-      </div>
-    </section>
-
     <section class="order" id="encargos">
       <div class="wrap">
         <p class="kicker">Encargos</p>
         <h2>Pide hoy, recoge mañana</h2>
-        <ol class="steps">
-          <li><strong>1. Elige</strong><span>Escribe qué quieres y para cuándo en el formulario.</span></li>
-          <li><strong>2. Te confirmamos</strong><span>Te respondemos por WhatsApp en horario de tienda.</span></li>
-          <li><strong>3. Recoge</strong><span>En Calle del Horno 12. Tartas: 48 h de antelación.</span></li>
-        </ol>
-        <form id="order-form" class="order-form" novalidate>
-          <div class="field">
-            <label for="f-name">Nombre</label>
-            <input id="f-name" name="name" type="text" autocomplete="name" required placeholder="Tu nombre" />
+        <p class="section-lede">Tartas y pedidos grandes con antelación. Te confirmamos por WhatsApp y pagas al recoger.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="encargos.html">Hacer un encargo</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="visit" id="tiendas">
+      <div class="wrap visit-inner">
+        <div>
+          <p class="kicker">Dónde estamos</p>
+          <h2>Nuestras tiendas</h2>
+          <p>Primera tienda junto al Mercat Central de Tarragona. Pulsa un marcador para ver fotos, horario y cómo llegar.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="mapa.html">Abrir el mapa mundial</a>
           </div>
-          <div class="field">
-            <label for="f-day">Día de recogida</label>
-            <input id="f-day" name="day" type="date" required />
-          </div>
-          <div class="field field-wide">
-            <label for="f-items">Tu pedido</label>
-            <textarea id="f-items" name="items" rows="4" required placeholder="Ej.: 2 hogazas de masa madre y una tarta de queso"></textarea>
-          </div>
-          <p class="form-error" id="form-error" role="alert" hidden></p>
-          <button class="btn btn-primary" type="submit">Enviar pedido por WhatsApp</button>
-          <p class="form-note">Se abrirá WhatsApp con tu pedido ya escrito. Sin pagos online: pagas al recoger.</p>
-        </form>
+        </div>
+        <div class="map-wrap">
+          <iframe title="Mapa: tiendas La Espiga en Tarragona" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=1.2389%2C41.1089%2C1.2589%2C41.1229&amp;layer=mapnik&amp;marker=41.1159%2C1.2489"></iframe>
+        </div>
       </div>
     </section>
 
@@ -151,7 +133,7 @@
             Calle del Horno 12, bajo<br />
             28004 Madrid
           </address>
-          <p><a href="tel:+34600123456">600 123 456</a> · <a href="mailto:hola@laespiga.example">hola@laespiga.example</a></p>
+          <a href="tel:+34600123456">600 123 456</a> · <a href="mailto:hola@laespiga.example">hola@laespiga.example</a>
           <dl class="hours">
             <div><dt>Lunes – Viernes</dt><dd>7:30 – 20:00</dd></div>
             <div><dt>Sábado</dt><dd>8:00 – 14:30</dd></div>

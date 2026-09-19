@@ -36,7 +36,26 @@
   </style>
 </head>
 <body>
-  <a class="back-link" href="index.html">← Volver a La Espiga</a>
+  <header class="site-header" id="top">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="Panadería La Espiga, inicio">
+        <svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8 6 6 10 6 14a6 6 0 0 0 12 0c0-4-2-8-6-12zm0 18a1.5 1.5 0 0 1-1.5-1.5c0-2 1-4 1.5-5 .5 1 1.5 3 1.5 5A1.5 1.5 0 0 1 12 20z" fill="currentColor"/></svg>
+        <span>La Espiga <small>panadería artesana</small></span>
+      </a>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list" aria-label="Abrir menú">☰</button>
+        <ul id="nav-list">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="index.html#carta">Carta</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="encargos.html">Encargos</a></li>
+          <li><a href="mapa.html" aria-current="page">Tiendas</a></li>
+          <li><a href="index.html#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn-primary header-cta" href="encargos.html">Hacer pedido</a>
+    </div>
+  </header>
   <div class="map-layout">
     <aside class="store-list" aria-label="Lista de tiendas">
       <h1>Nuestras tiendas</h1>
@@ -106,5 +125,6 @@
 
     if (LOCALES.length === 1) map.flyTo([LOCALES[0].lat, LOCALES[0].lon], 13, { duration: 1.5 });
   </script>
+  <script src="app.js" defer></script>
 </body>
 </html>

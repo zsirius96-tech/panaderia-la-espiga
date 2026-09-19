@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nosotros — Panadería La Espiga</title>
+  <meta name="description" content="Tres generaciones detrás del mostrador: la historia de Panadería La Espiga, masa madre desde 1987." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#historia">Saltar al contenido</a>
+
+  <header class="site-header" id="top">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="Panadería La Espiga, inicio">
+        <svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8 6 6 10 6 14a6 6 0 0 0 12 0c0-4-2-8-6-12zm0 18a1.5 1.5 0 0 1-1.5-1.5c0-2 1-4 1.5-5 .5 1 1.5 3 1.5 5A1.5 1.5 0 0 1 12 20z" fill="currentColor"/></svg>
+        <span>La Espiga <small>panadería artesana</small></span>
+      </a>
+      <nav class="main-nav" aria-label="Navegación principal">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list" aria-label="Abrir menú">☰</button>
+        <ul id="nav-list">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="index.html#carta">Carta</a></li>
+          <li><a href="nosotros.html" aria-current="page">Nosotros</a></li>
+          <li><a href="encargos.html">Encargos</a></li>
+          <li><a href="mapa.html">Tiendas</a></li>
+          <li><a href="index.html#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn-primary header-cta" href="encargos.html">Hacer pedido</a>
+    </div>
+  </header>
+
+  <main id="historia">
+    <section class="story">
+      <div class="wrap story-inner">
+        <div>
+          <p class="kicker">Nuestra historia</p>
+          <h1 style="font-size:clamp(2rem,4.5vw,3rem)">Tres generaciones detrás del mostrador</h1>
+          <p>Empezamos en 1987 con un horno de leña y la masa madre del abuelo Tomás, que aún cuidamos cada día con su mismo nombre: <strong>Manuela</strong>. Hoy seguimos haciendo el pan igual de despacio, aunque la cola de la mañana sea más larga.</p>
+          <p>Molinos de cercanía, huevos camperos y mantequilla de verdad. Nada de mezclas preparadas: aquí se amasa, se espera y se hornea.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="index.html#carta">Ver la carta</a>
+            <a class="btn btn-ghost" href="mapa.html" style="border-color:var(--cream);color:var(--cream)">Dónde estamos</a>
+          </div>
+        </div>
+        <ul class="values">
+          <li><strong>24 h</strong><span>fermentación mínima de la hogaza</span></li>
+          <li><strong>3</strong><span>hornadas frescas al día</span></li>
+          <li><strong>0</strong><span>conservantes ni premezclas</span></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p><strong>Panadería La Espiga</strong> · Pan artesano desde 1987</p>
+      <p class="legal">© <span id="year">2026</span> La Espiga · <a href="#top">Volver arriba</a></p>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

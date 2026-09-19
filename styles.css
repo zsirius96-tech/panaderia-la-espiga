@@ -53,6 +53,7 @@ section { padding: 72px 0; }
 .main-nav ul { display: flex; gap: 4px; list-style: none; margin: 0; padding: 0; }
 .main-nav a { display: block; padding: 10px 14px; border-radius: 10px; text-decoration: none; color: var(--espresso); font-weight: 600; }
 .main-nav a:hover { background: var(--cream-dark); }
+.main-nav a[aria-current="page"] { background: var(--cream-dark); }
 .nav-toggle { display: none; font-size: 1.5rem; background: none; border: 1px solid var(--cream-dark); border-radius: 10px; padding: 6px 12px; cursor: pointer; color: var(--espresso); }
 
 /* Buttons */
