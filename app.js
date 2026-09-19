@@ -6,8 +6,9 @@ const CONFIG = {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Año del footer
-  document.getElementById("year").textContent = new Date().getFullYear();
+  // Año del footer (no existe en mapa.html)
+  const yearEl = document.getElementById("year");
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
 
   // Sombra del header al hacer scroll
   const header = document.querySelector(".site-header");
